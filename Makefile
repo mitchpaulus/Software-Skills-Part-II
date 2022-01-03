@@ -21,7 +21,7 @@ output.pdf : presentation.markdown
 	pandoc -t beamer -o $@ $<
 
 pandoc.docx : sample.markdown pandoc-template.docx
-	pandoc --reference-docx=pandoc-template.docx -o $@ $<
+	pandoc --reference-doc=pandoc-template.docx -o $@ $<
 
 pandoc.html : sample.markdown
 	pandoc -s -o $@ $<
